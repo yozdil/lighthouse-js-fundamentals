@@ -1,4 +1,4 @@
-const raining = true;
+const raining = false;
 const cold = false;
 
 // if (raining) {
