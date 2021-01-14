@@ -1,13 +1,21 @@
-var num = 99;
+var count = 60;
 
-while (num > 0) {
-    if (num === 2) {
-      console.log( num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottle of juice on the wall!") }
-    else if (num === 1) {
-      console.log( num + " bottle of juice on the wall! " + num + " bottle of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!") }
-    else {
-      console.log( num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... " + (num-1) + " bottles of juice on the wall!")
-    }
+while (count >= 0) {
+    if (count === 50) {
+    console.log ("Orbiter transfers from ground to internal power")
+  } else if (count === 31) {
+    console.log ("Ground launch sequencer is go for auto sequence start")
+  } else if (count === 16) {
+    console.log ("Activate launch pad sound suppression system")
+  } else if (count === 10) {
+    console.log ("Activate main engine hydrogen burnoff system")
+  } else if (count === 6) {
+    console.log ("Main engine start")
+  } else if (count === 0) {
+    console.log ("Solid rocket booster ignition and liftoff!")
+  } else {
+    console.log ("T-" + count + " seconds")
+  }
 
-    num = num - 1;
+  count = count - 1;
 }
