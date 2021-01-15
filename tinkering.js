@@ -1,14 +1,23 @@
-// Function expression that assigns the function displayFavorite 
-// to the variable favoriteMovie
-var favoriteMovie = function displayFavorite(movieName) {
-  console.log("My favorite movie is " + movieName);
-};
+const stations = [
+  ['Big Bear Donair', 10, 'restaurant'],
+  ['Bright Lights Elementary', 50, 'school'],
+  ['Moose Mountain Community Centre', 45, 'community centre']
+];
 
-// Function declaration that has two parameters: a function for displaying
-// a message, along with a name of a movie
-function movies(messageFunction, name) {
-  messageFunction(name);
-}
+const chooseStations = function (stations) {
+  const goodStations = [];
+  for (const station of stations) {
+    const capacity = station[1];
 
-// Call the movies function, pass in the favoriteMovie function and name of movie
-movies(favoriteMovie, "Finding Nemo");
+    if (capacity >= 20) {
+      const type = station[2];
+      
+      if (type === "school" || type === "community centre") {
+        goodStations.push(station[0]);
+      }
+    }
+  }
+  return goodStations
+}  
+
+chooseStations(stations);
