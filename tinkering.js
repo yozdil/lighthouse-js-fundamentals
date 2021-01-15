@@ -1,23 +1,14 @@
-/*
- * Programming Quiz: Laugh (5-4)
- */
+// Function expression that assigns the function displayFavorite 
+// to the variable favoriteMovie
+var favoriteMovie = function displayFavorite(movieName) {
+  console.log("My favorite movie is " + movieName);
+};
 
-/*
- * QUIZ REQUIREMENTS
- * - Your code should have a variable `laugh`
- * - Your code should include an anonymous function expression stored in the variable `laugh`
- * - Your anonymous function expression should take one argument
- * - Your anonymous function expression should return the correct number of `hahaha`\'s
- */
-
-
-var laugh = function (laughTimes) {
-  var message = '';
-  for (var i = 1; i <= laughTimes; i++) {
-    message += 'ha'
-  }
-  message += '!'
-  return message;
+// Function declaration that has two parameters: a function for displaying
+// a message, along with a name of a movie
+function movies(messageFunction, name) {
+  messageFunction(name);
 }
 
-console.log(laugh(10));
+// Call the movies function, pass in the favoriteMovie function and name of movie
+movies(favoriteMovie, "Finding Nemo");
