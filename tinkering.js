@@ -1,20 +1,17 @@
-var x = 1;
-
-function addTwo() {
-  x = x + 2;
+function makeLine(length) {
+  var line = "";
+  for (var j = 1; j <= length; j++) {
+    line += "* "
+  }
+  return line + "\n";
 }
 
-addTwo();
-x = x + 1;
-console.log(x);
 
-var x = 1;
+function buildTriangle(base) {
+  var triangle = '';
+  for (var i= 1; i <= base; i++) {
+    triangle += makeLine(i);
+  }
+  return triangle; }
 
-function addTwo() {
-  // Here using var declares a different function scope variable x.
-  var x = x + 2;
-}
-
-addTwo();
-x = x + 1;
-console.log(x);
+console.log(buildTriangle(8));
