@@ -1,17 +1,23 @@
-function makeLine(length) {
-  var line = "";
-  for (var j = 1; j <= length; j++) {
-    line += "* "
+/*
+ * Programming Quiz: Laugh (5-4)
+ */
+
+/*
+ * QUIZ REQUIREMENTS
+ * - Your code should have a variable `laugh`
+ * - Your code should include an anonymous function expression stored in the variable `laugh`
+ * - Your anonymous function expression should take one argument
+ * - Your anonymous function expression should return the correct number of `hahaha`\'s
+ */
+
+
+var laugh = function (laughTimes) {
+  var message = '';
+  for (var i = 1; i <= laughTimes; i++) {
+    message += 'ha'
   }
-  return line + "\n";
+  message += '!'
+  return message;
 }
 
-
-function buildTriangle(base) {
-  var triangle = '';
-  for (var i= 1; i <= base; i++) {
-    triangle += makeLine(i);
-  }
-  return triangle; }
-
-console.log(buildTriangle(8));
+console.log(laugh(10));
