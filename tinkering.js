@@ -1,19 +1,9 @@
-const moves = ['north', 'north', 'west', 'west', 'north', 'east','north']; 
 
-const finalPosition = function (moves) {
-  let position = [0,0];
-  for (const move of moves) {
-    if (move === "north") {
-      position[1]++; }
-    else if (move === "south") {
-      position[1]--; }
-    else if (move === "west") {
-      position[0]--; }
-    else {
-      position[0]++; }
-  }
-  return position;
+function ageCalculator(name, yearOfBirth, currentYear) {
+  let age = currentYear - yearOfBirth;
+  let message = name + " is " + age + " years old."
+  return message;
 }
-  
-  
-finalPosition(moves);
+
+console.log(ageCalculator("Miranda", 1983, 2015));
+console.log(ageCalculator("Ferdinand", 1988, 2015));
