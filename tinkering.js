@@ -2,15 +2,13 @@ function lastIndexOf(array, val) {
   // To create a reversed array.
   const reversedArray = [];
   for (let i = array.length - 1; i >= 0; i--) {
-    reversedArray.push(array[i]); }
-
-  for (let j = 0; j < array.length; j++) {
-    if (reversedArray[j] === val) {
-      return (array.length - 1) - reversedArray.indexOf(val);
-    }
-  }  
+    if (array[i] === val) {
+          return i;
+        }
+  }
   return -1;
 }
+
 
 console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
 console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
