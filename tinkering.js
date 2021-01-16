@@ -1,17 +1,34 @@
-function lastIndexOf(array, val) {
-  // To create a reversed array.
-  const reversedArray = [];
-  for (let i = array.length - 1; i >= 0; i--) {
-    if (array[i] === val) {
-          return i;
-        }
+// The array of cars objects with time and speed
+
+const cars = [
+  {
+    time: 1568329654807,
+    speed: 40,
+  },
+  {
+    time: 1568329821632,
+    speed: 42,
+  },
+  {
+    time: 1568331115463,
+    speed: 35
   }
-  return -1;
+]
+
+// The speed that will be added into the array of cars
+
+const speed = 38
+
+// Function that adds the "speed" given the time right now into the cars array
+
+const carPassing = function (cars, speed) {
+  const car = {
+    time: Date.now(),
+    speed: speed
+  }
+  cars.push(car);  
+  return cars;
 }
 
+console.log(carPassing(cars, speed));
 
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 1), "=?", 3);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 2), "=?", 4);
-console.log(lastIndexOf([ 0, 1, 4, 1, 2 ], 3), "=?", -1);
-console.log(lastIndexOf([ 5, 5, 5 ], 5), "=?", 2);
-console.log(lastIndexOf([], 3), "=?", -1);
