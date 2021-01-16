@@ -1,34 +1,24 @@
-// The array of cars objects with time and speed
-
-const cars = [
+const vegetables = [
   {
-    time: 1568329654807,
-    speed: 40,
+    submitter: 'Old Man Franklin',
+    redness: 10,
+    plumpness: 5
   },
   {
-    time: 1568329821632,
-    speed: 42,
+    submitter: 'Sally Tomato-Grower',
+    redness: 2,
+    plumpness: 8
   },
   {
-    time: 1568331115463,
-    speed: 35
+    submitter: 'Hamid Hamidson',
+    redness: 4,
+    plumpness: 3
   }
 ]
 
-// The speed that will be added into the array of cars
 
-const speed = 38
+console.log(vegetables)
 
-// Function that adds the "speed" given the time right now into the cars array
+const metric = 'redness'
 
-const carPassing = function (cars, speed) {
-  const car = {
-    time: Date.now(),
-    speed: speed
-  }
-  cars.push(car);  
-  return cars;
-}
-
-console.log(carPassing(cars, speed));
-
+// judgeVegetable(vegetables, metric)
